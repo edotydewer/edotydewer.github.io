@@ -1,11 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my website on GitHub Pages.</p>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-logo">MySite</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>สวัสดี! ผมชื่อ [ใส่ชื่อของคุณ]</h1>
+            <p>นักพัฒนา / นักออกแบบ / หรือสิ่งที่คุณเป็น</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2>เกี่ยวกับผม (About Me)</h2>
+            <p>
+                ใส่คำอธิบายเกี่ยวกับตัวคุณที่นี่... เล่าเรื่องราวของคุณ ความสนใจ หรือทักษะที่คุณมี
+                เพื่อให้ผู้เยี่ยมชมได้รู้จักคุณมากขึ้น
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>ผลงาน (Projects)</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <h3>โปรเจกต์ที่ 1</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์ของคุณ</p>
+                </div>
+                <div class="card">
+                    <h3>โปรเจกต์ที่ 2</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์ของคุณ</p>
+                </div>
+                <div class="card">
+                    <h3>โปรเจกต์ที่ 3</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์ของคุณ</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>ติดต่อ (Contact)</h2>
+            <p>คุณสามารถติดต่อผมได้ที่อีเมล: [ใส่อีเมลของคุณ]</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [ใส่ชื่อของคุณ]. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
