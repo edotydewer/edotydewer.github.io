@@ -1,12 +1,40 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 /* Basic Reset & Body Style */
 body {
-    font-family: 'Sarabun', sans-serif;
+    font-family: 'Orbitron', sans-serif; /* Futuristic Font */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000411; /* Dark space blue */
+    color: #EAEAEA; /* Light text color */
     line-height: 1.6;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
+
+/* Starry Night Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 150px 100px, #fff, rgba(0,0,0,0));
+    background-size: 200px 200px;
+    animation: stars 120s linear infinite;
+    z-index: -1;
+}
+@keyframes stars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-200px); }
+}
+
 
 .container {
     max-width: 960px;
@@ -15,11 +43,11 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation Bar */
+/* Glassmorphism Navigation Bar */
 nav {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background: rgba(0, 4, 17, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 191, 255, 0.2);
     position: fixed;
     width: 100%;
     top: 0;
@@ -33,10 +61,11 @@ nav .container {
 }
 
 nav a.nav-logo {
-    color: #fff;
+    color: #00BFFF; /* Deep Sky Blue */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5rem;
+    text-shadow: 0 0 5px #00BFFF;
 }
 
 nav ul {
@@ -51,13 +80,18 @@ nav ul li {
 }
 
 nav a {
-    color: #fff;
+    color: #EAEAEA;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #00BFFF;
+    text-shadow: 0 0 5px #00BFFF;
 }
 
 /* Hero Section */
 .hero {
-    background: #556270;
     color: #fff;
     height: 60vh;
     display: flex;
@@ -65,11 +99,12 @@ nav a {
     justify-content: center;
     text-align: center;
     margin-top: 60px; /* Offset for fixed nav */
+    background: transparent;
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 0;
+    text-shadow: 0 0 15px #00BFFF;
 }
 
 /* Main Content Sections */
@@ -79,16 +114,17 @@ main {
 
 section {
     padding: 2rem 0;
-    border-bottom: 1px solid #ddd;
+    border: none;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #556270;
+    color: #00BFFF;
+    text-shadow: 0 0 8px rgba(0, 191, 255, 0.7);
 }
 
-/* Project Grid & Cards */
+/* Project Grid & Glass Cards */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -96,17 +132,27 @@ h2 {
 }
 
 .card {
-    background: #fff;
+    background: rgba(0, 191, 255, 0.05);
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    backdrop-filter: blur(5px);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 191, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 2rem;
-    background: #333;
-    color: #fff;
+    background: transparent;
+    color: #aaa;
     margin-top: 2rem;
+    border-top: 1px solid rgba(0, 191, 255, 0.2);
 }
