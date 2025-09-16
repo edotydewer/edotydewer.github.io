@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เครื่องคำนวณ TDEE</title>
+    <link rel="stylesheet" href="tdee-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <div class="calculator-card">
+            <h2>คำนวณค่า TDEE ของคุณ</h2>
+            <p>พลังงานที่ร่างกายต้องการในแต่ละวัน</p>
+            
+            <form id="tdee-form">
+                <div class="form-group">
+                    <label>เพศ:</label>
+                    <input type="radio" id="male" name="gender" value="male" checked>
+                    <label for="male">ชาย</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">หญิง</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">อายุ (ปี):</label>
+                    <input type="number" id="age" placeholder="เช่น 25" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="weight">น้ำหนัก (kg):</label>
+                    <input type="number" id="weight" placeholder="เช่น 60" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="height">ส่วนสูง (cm):</label>
+                    <input type="number" id="height" placeholder="เช่น 170" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="activity">ระดับกิจกรรม:</label>
+                    <select id="activity" required>
+                        <option value="1.2">ไม่ออกกำลังกายเลย</option>
+                        <option value="1.375">ออกกำลังกายเบาๆ (1-3 วัน/สัปดาห์)</option>
+                        <option value="1.55">ออกกำลังกายปานกลาง (3-5 วัน/สัปดาห์)</option>
+                        <option value="1.725">ออกกำลังกายหนัก (6-7 วัน/สัปดาห์)</option>
+                        <option value="1.9">ออกกำลังกายหนักมาก (นักกีฬา)</option>
+                    </select>
+                </div>
+                
+                <button type="submit">คำนวณ</button>
+            </form>
+
+            <div id="result" class="result-area">
+                </div>
+             <a href="index.html" class="back-link">กลับสู่หน้าหลัก</a>
+        </div>
+    </main>
+
+    <script src="tdee-script.js"></script>
+
+</body>
+</html>
